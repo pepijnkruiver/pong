@@ -5,9 +5,7 @@ package
 	import screens.GameOverScreen;
 	import screens.GameScreen;
 	import screens.IntroScreen;
-	import screens.GameWinScreen;
 	import sounds.SoundPlayer;
-	    
 	
 	/**
 	 * ...
@@ -15,11 +13,11 @@ package
 	 */
 	public class Main extends MovieClip 
 	{
-		private var gameScreen:GameScreen;
+		private var gameScreen:GameScreen
 		private var introScreen:IntroScreen;
 		private var gameOverScreen:GameOverScreen;
 		private var soundPlayer:SoundPlayer;
-		private var winScreen:GameWinScreen;
+		
 		public function Main() 
 		{
 			if (stage) init();
@@ -44,20 +42,6 @@ package
 			gameScreen = new GameScreen();
 			addChild(gameScreen);
 			gameScreen.addEventListener(GameScreen.GAME_OVER, onGameOver);
-			gameScreen.addEventListener(GameScreen.YOU_WON, onYouWon);
-	}		
-		private function onYouWon(e:Event):void 
-		{
-			
-			
-			removeChild(gameScreen);
-			winScreen = new GameWinScreen();
-			trace(gameScreen);
-			gameScreen.removeEventListener(GameScreen.YOU_WON, onYouWon);
-						
-			
-			addChild(winScreen);
-			winScreen.addEventListener(GameWinScreen.RESET, onReset);
 			
 			
 			
@@ -76,13 +60,12 @@ package
 			
 		}		
 		private function onReset(e:Event):void 
-  {
-   e.target.removeEventListener(GameOverScreen.RESET, onReset);
-   if(winScreen != null)if(this.contains(winScreen))removeChild(winScreen);
-   if(gameOverScreen != null)if(this.contains(gameOverScreen))removeChild(gameOverScreen);
-   
-   buildIntroSreen();
-  }
+		{
+			removeChild(gameOverScreen);
+			gameOverScreen.removeEventListener(GameOverScreen.RESET, onReset);
+			
+			buildIntroSreen();
+		}
 		
 	}
 	

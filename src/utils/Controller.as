@@ -22,7 +22,8 @@ package utils
 		private var _downKeyCode:int;
 		private var _fireKeyCode:int;
 		
-		public function Controller(stage:Stage, up:int = Keyboard.W, down:int = Keyboard.S, fire:int = Keyboard.SPACE) 
+		
+		public function Controller(stage:Stage, up:int = Keyboard.UP, down:int = Keyboard.DOWN, fire:int = Keyboard.SPACE) 
 		{
 			_upKeyCode = up;
 			_downKeyCode = down;

@@ -25,11 +25,11 @@ package actors
 		{
 			if (controller.up)
 			{
-				speed = -10;
+				speed = -15;
 			}
 			else if(controller.down)
 			{
-				speed = 10;
+				speed = 15;
 			}else
 			{
 				if (speed > 0) speed--;
