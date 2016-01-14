@@ -1,0 +1,23 @@
+
+Changes versie 1:
+
+-AI snelheid
+-Ball Snelheid
+-Player snelheid
+-Ball Hoeveelheid
+-Font van startscherm
+-Ball sprite
+-Paddle sprite
+-"Intro" soundeffect
+-"Lose" soundeffect
+-"pong" soundeffects
+
+Additions versie 2:
+-Win screen zonder geluid
+-Informatie over win conditie en besturing voor de speler op het beginscherm
+
+Changes versie 2:
+-Function veranderd in gamescreen zodat er verschil wordt gemaakt tussen het winnen van het spel en het verliezen van het spel, zodat het juiste scherm wordt geladen.
+-hoek veranderd waarmee de ball begint wanneer hij in het speelveld wordt geladen
+-Besturing verander naar S W keys.
+-Astand die nodig is tussen ball en paddle om AI op max snelheid te laten gaan

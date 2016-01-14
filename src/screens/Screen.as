@@ -8,7 +8,7 @@ package screens
 	 */
 	public class Screen extends MovieClip
 	{
-		[Embed(source = "../../lib/starjedi/Starjedi.ttf",
+		[Embed(source = "../../lib/starjedi/Ketchum.otf",
 		fontName = "jedi", 
 		mimeType = "application/x-font", 
 		fontWeight="normal", 

@@ -16,6 +16,7 @@ package actors
 		private var _movement:Point;
 		public static const OUTSIDE_RIGHT:String = "outside right";
 		public static const OUTSIDE_LEFT:String = "outside left";
+		
 		public function set movement(m:Point):void
 		{
 			_movement = m;
@@ -55,7 +56,7 @@ package actors
 		
 		private function restart(e:TimerEvent):void 
 		{
-			_movement = MovementCalculator.calculateMovement(15 + Math.random() * 10, Math.random() * 360);
+			_movement = MovementCalculator.calculateMovement(8+ Math.random() *8,50+ Math.random() *70);
 			if (_movement.x > 0 && _movement.x < 2) _movement.x += 2;
 			if (_movement.x < 0 && _movement.x > -2) _movement.x -= 2;
 		}
